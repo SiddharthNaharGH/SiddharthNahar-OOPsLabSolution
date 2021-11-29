@@ -35,35 +35,14 @@ public class CredentialService {
 		char[] password = new char[8];
 		
 		for(int i = 0;i<8;i++) {
-			if(i==0)
-			{
-				int idx = random.nextInt(upperChars.length());
-				password[i] =upperChars.charAt(idx);
-			}
-			else if(i==1)
-			{
-				int idx = random.nextInt(lowerChars.length());
-				password[i] =lowerChars.charAt(idx);
-			}
-			else if(i==2)
-			{
-				int idx = random.nextInt(numerals.length());
-				password[i] =lowerChars.charAt(idx);
-			}
-			else if(i==3)
-			{	
+			
 				int idx = random.nextInt(allowedChars.length());
 				password[i] = allowedChars.charAt(idx);
-			}
-			else
-			{
-				int idx = random.nextInt(allowedChars.length());
-				password[i] = allowedChars.charAt(idx);
-			}
+			
 		}
 			
 		
-		return password.toString();
+		return String.valueOf(password);
 
 	}
 	
